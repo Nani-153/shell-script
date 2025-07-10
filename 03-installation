@@ -34,7 +34,7 @@ then
 dnf install git -y
 VALIDATE $? "installing git"
 else
-   echo -e "$Y git is already installed $N...nothing to do"
+   echo -e "$Y git is already installed $N ...nothing to do"
    exit 1
 fi
 
