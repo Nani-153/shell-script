@@ -30,6 +30,8 @@ else
 fi
 }
 
+CHECK_ROOT
+
 for $package in $@
 do
    dnf list installed $package -y &>>$LOG_FILE
