@@ -30,7 +30,20 @@ else
 fi
 }
 
+USAGE(){
+     echo -e "$R USAGE:: $N sudo sh 04-redirectors.sh package1 package2 ..."
+     exit 1
+
+}
+
+echo "script started executing at: $(date)" | tee -a $LOG_FILE
+
 CHECK_ROOT
+
+if [ $# -eq 0 ]
+then
+    USAGE
+fi    
 
 for package in $@
 do
